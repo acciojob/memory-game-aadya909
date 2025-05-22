@@ -95,6 +95,7 @@ const App = () => {
             {tiles.map((tile) => (
               <div
                 key={tile.id}
+                data-cy={`tile-${tile.id}`}
                 className={`cell ${tile.flipped || matched.includes(tile.value) ? 'flipped' : ''}`}
                 onClick={() => handleClick(tile)}
               >
