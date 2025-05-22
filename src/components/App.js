@@ -87,6 +87,7 @@ const App = () => {
         </div>
       ) : (
         <div className="game_container">
+           <h4>Select a tile to match pairs!</h4> 
           <h1>GAmE YO</h1>
           <p>Tries: <span id="tries">{tries}</span></p>
           <div className="cells_container" style={{ gridTemplateColumns: `repeat(${Math.sqrt(tiles.length)}, 100px)` }}>
