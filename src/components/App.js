@@ -69,17 +69,19 @@ const App = () => {
       {!started ? (
         <div className="levels_container">
           <h1>Welcome!</h1>
-          {Object.keys(difficultyMap).map((diff) => (
-            <label key={diff}>
-              <input
-                type="radio"
-                name="difficulty"
-                value={diff}
-                onChange={() => setLevel(diff)}
-              />{' '}
-              {diff}
-            </label>
-          ))}
+         {Object.keys(difficultyMap).map((diff) => (
+  <label key={diff} htmlFor={diff}>
+    <input
+      type="radio"
+      name="difficulty"
+      id={diff}             // <-- added id here
+      value={diff}
+      onChange={() => setLevel(diff)}
+    />{' '}
+    {diff}
+  </label>
+))}
+
           <br />
           <button id="startBtn" onClick={handleStart}>Start</button>
         </div>
