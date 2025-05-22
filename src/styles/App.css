@@ -1,1 +1,39 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.levels_container,
+.game_container {
+  background-color: blue;
+  color: black;
+  padding: 30px;
+}
+
+.cells_container {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.cell.flipped {
+  background-color: lightgreen;
+}
+
 
